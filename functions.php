@@ -1,4 +1,18 @@
 <?php
+    add_action( 'after_setup_theme', 'generic_setup' );
+    function generic_setup() {
+        load_theme_textdomain( 'generic', get_template_directory() . '/languages' );
+        add_theme_support( 'title-tag' );
+        add_theme_support( 'custom-logo' );
+        add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'responsive-embeds' );
+        add_theme_support( 'automatic-feed-links' );
+        add_theme_support( 'html5', array( 'search-form', 'navigation-widgets' ) );
+        add_theme_support( 'woocommerce' );
+        global $content_width;
+        if ( !isset( $content_width ) ) { $content_width = 1920; }
+        register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'generic' ) ) );
+    }
 
     wp_enqueue_script( 'jquery' );
 
@@ -34,13 +48,17 @@
 
     add_action('wp_enqueue_scripts','custom_js_load');
 
-    // -------- Adding Feature Images
+    // -------- Adding Theme Functions
     function my_theme_setup(){
         add_theme_support('post-thumbnails');
+        add_theme_support( 'menus' );
+
     }
 
     add_action('after_setup_theme', 'my_theme_setup');
 
+
+    // -------- Adding Excerpt max length
     function custom_excerpt_length( $length ) {
 	    return 10;
     }
