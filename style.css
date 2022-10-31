@@ -1,14 +1,12 @@
 :root {
   --black: #000000;
   --white: #ffffff;
-  --light-blue: #319cc2;
-  --blue: #2797c1;
-  --dark-blue: #234c76;
-  --red: #dc3232;
 }
 
 body {
   margin: 0;
+  background: var(--black);
+  color: var(--white);
 }
 
 .container {
@@ -42,8 +40,8 @@ article a {
   }
 }
 .error404 .not-found .home-btn {
-  color: var(--white);
-  background: var(--black);
+  color: var(--black);
+  background: var(--white);
   padding: 15px;
 }
 .error404 .not-found .entry-content p {
@@ -66,12 +64,12 @@ article a {
   display: flex;
   justify-content: space-between;
 }
-#header .container .menu ul {
+#header .container .menu {
   display: flex;
   list-style: none;
   margin-bottom: 0;
 }
-#header .container .menu ul a {
+#header .container .menu a {
   padding-right: 30px;
 }
 #header .container nav {
@@ -80,6 +78,37 @@ article a {
 }
 #header .container nav a {
   color: var(--white);
+}
+#header .menu {
+  display: flex;
+}
+#header .menu li {
+  list-style: none;
+  display: flex;
+  align-self: center;
+}
+#header .menu .sub-menu {
+  display: none;
+}
+#header .menu .menu-item {
+  position: relative;
+}
+#header .menu .menu-item .sub-menu {
+  position: absolute;
+  z-index: 2;
+  width: 160px;
+  margin: 0;
+  padding-left: 0;
+  background: var(--white);
+  margin-top: 30px;
+}
+#header .menu .menu-item:hover > .sub-menu {
+  display: block;
+  position: absolute;
+}
+#header .menu .menu-item:hover > .sub-menu a {
+  color: var(--black);
+  padding: 5px;
 }
 
 #hero-slider .container {
@@ -171,7 +200,8 @@ h6 {
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 60px;
+  line-height: 1;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -193,8 +223,8 @@ h1 {
 .blog img {
   max-width: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .blog .post {
   width: 33%;
@@ -208,6 +238,7 @@ h1 {
   border-radius: 1em;
   background: #ece9e6;
   background: linear-gradient(to right, #ffffff, #ece9e6);
+  border: 1px solid rgba(0, 0, 0, 0.825);
 }
 .blog .card__body {
   padding: 1rem;
@@ -217,6 +248,8 @@ h1 {
 }
 .blog .card__header img {
   height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .blog .tag {
   align-self: flex-start;
@@ -263,5 +296,20 @@ h1 {
 }
 .blog .card-text {
   min-height: 150px;
-  margin: 20px;
+  padding: 20px;
+  background: var(--black);
+  color: var(--white);
+}
+
+.single-post .single-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.single-post .single-img img {
+  width: 60%;
+  max-height: 400px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

@@ -2,16 +2,13 @@
 :root {
   --black: #000000;
   --white: #ffffff;
-  --light-blue: #319cc2;
-  --blue: #2797c1;
-  --dark-blue: #234c76;
-  --red: #dc3232;
 }
 
 body {
   margin: 0;
+  background: var(--black);
+  color: var(--white);
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,8 +41,8 @@ article {
       }
     }
     .home-btn {
-      color: var(--white);
-      background: var(--black);
+      color: var(--black);
+      background: var(--white);
       padding: 15px;
     }
     .entry-content p {

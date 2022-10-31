@@ -24,7 +24,7 @@
         <div class="container">
             <div class="logo-div">
                 <a href="/#">
-                    <img class="header-logo " src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Baseline logo">
+                    <img class="header-logo " src="<?php bloginfo('template_url'); ?>/images/logo.svg" alt="Baseline logo" width="120px" height="50px">
                 </a>
             </div>
             <nav>
