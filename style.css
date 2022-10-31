@@ -215,6 +215,9 @@ h1 {
   flex-direction: column;
   gap: 0.5rem;
 }
+.blog .card__header img {
+  height: 220px;
+}
 .blog .tag {
   align-self: flex-start;
   padding: 0.25em 0.75em;
