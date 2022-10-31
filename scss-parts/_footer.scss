@@ -3,6 +3,9 @@
   color: var(--white);
   padding: 40px 0;
   margin-top: 50px;
+  .container {
+    justify-content: center;
+  }
   .social_icon {
     display: flex;
     justify-content: center;

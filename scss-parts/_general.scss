@@ -18,6 +18,17 @@ body {
   padding: 0 25px;
 }
 
+article {
+  margin-top: 50px;
+  a {
+    padding-bottom: 50px;
+  }
+}
+
+#content {
+  min-height: 80vh;
+}
+
 // 404 Page
 .error404 {
   .not-found {
@@ -41,4 +52,12 @@ body {
       padding-bottom: 25px;
     }
   }
+}
+
+// Button
+.home-btn,
+.button-div .button {
+  padding: 15px 20px;
+  margin-top: 50px;
+  border-radius: 30px;
 }
